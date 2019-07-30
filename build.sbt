@@ -14,7 +14,7 @@ lazy val Versions = new {
   val ciris = "0.12.1"
   val logback = "1.2.3"
   val h2database = "1.4.199"
-  val quill = "3.3.0"
+  val quill = "3.4.1"
   val tapir = "0.9.0"
 }
 addCompilerPlugin("org.typelevel" %% "kind-projector" % Versions.kindProjector)
