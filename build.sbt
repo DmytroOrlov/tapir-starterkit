@@ -1,9 +1,6 @@
 scalaVersion              := "2.12.8"
 name                      := "starterkit"
 organization              := "com.organization"
-scalafmtOnCompile         := true
-fork in Test              := true
-parallelExecution in Test := true
 
 lazy val Versions = new {
   val kindProjector = "0.10.3"
