@@ -1,7 +1,6 @@
 package io.github.dmytro_orlov.starterkit
 
 import scala.collection.JavaConverters._
-import scala.util.Try
 
 import cats.effect.ExitCode
 import io.github.dmytro_orlov.starterkit.model.config.Application
@@ -29,7 +28,7 @@ object Main extends App {
 
   override def run(args: List[String]): ZIO[Main.Environment, Nothing, Int] = {
     val result = for {
-      application <- ZIO.fromTry(Try(Application.getConfig))
+      application <- ZIO.effect(Application.getConfig)
 
       httpApp = Router("/" -> userRoute.getRoutes, "/docs" -> new SwaggerHttp4s(yaml).routes[TaskR[AppEnvironment, ?]]).orNotFound
       finalHttpApp = Logger.httpApp[ZIO[AppEnvironment, Throwable, ?]](true, true)(httpApp)

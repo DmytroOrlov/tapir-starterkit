@@ -41,8 +41,7 @@ trait LiveUserRepository extends UserRepository {
         .mapError {
           case e: Exception => DBError(e)
           case t: Throwable => UnexpectedError(t)
-        }
-        .map(_ => ())
+        }.unit
     }
   }
 }
