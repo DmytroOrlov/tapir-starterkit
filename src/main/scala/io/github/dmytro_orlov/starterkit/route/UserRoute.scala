@@ -6,7 +6,7 @@ import io.github.dmytro_orlov.starterkit.model.database.User
 import io.github.dmytro_orlov.starterkit.model.response.{ErrorResponse, InternalServerErrorResponse, NotFoundResponse}
 import io.github.dmytro_orlov.starterkit.model.{DBError, Error, NotFoundError, UnexpectedError}
 import io.github.dmytro_orlov.starterkit.module.db._
-import io.github.dmytro_orlov.starterkit.module.logger.{Logger, _}
+import io.github.dmytro_orlov.starterkit.module.logger._
 import io.circe.generic.auto._
 import org.http4s._
 import org.http4s.dsl.Http4sDsl
