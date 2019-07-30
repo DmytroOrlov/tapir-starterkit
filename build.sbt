@@ -42,8 +42,8 @@ libraryDependencies ++= Seq(
   "com.softwaremill.tapir" %% "tapir-openapi-docs"       % Versions.tapir,
   "com.softwaremill.tapir" %% "tapir-openapi-circe-yaml" % Versions.tapir,
   "com.softwaremill.tapir" %% "tapir-json-circe"         % Versions.tapir,
-  "org.scalatest" %% "scalatest"                         % Versions.scalaTest % "test",
-  "com.danielasfregola" %% "random-data-generator"       % Versions.randomDataGenerator % "test"
+  "org.scalatest" %% "scalatest"                         % Versions.scalaTest % Test,
+  "com.danielasfregola" %% "random-data-generator"       % Versions.randomDataGenerator % Test
 )
 
 // Java libraries
